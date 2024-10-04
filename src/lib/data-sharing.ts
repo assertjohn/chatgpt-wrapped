@@ -24,7 +24,7 @@ export async function shareAnonymizedData(stats: Stats) {
   const uniqueHash = generateUniqueHash(persistentId, timestamp);
 
   const anonymizedData = {
-    id: persistentId,
+    submissionId: persistentId,
     timestamp: timestamp,
     totalMessages: stats.userMessageCount + stats.assistantMessageCount,
     conversationCount: stats.conversationCount,
