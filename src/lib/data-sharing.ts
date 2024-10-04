@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { Stats } from '@/lib/utils';
 
 function generatePersistentId() {

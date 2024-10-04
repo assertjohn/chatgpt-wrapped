@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ChatGPT Data Analyzer
 
-## Getting Started
+## What is it?
 
-First, run the development server:
+ChatGPT Data Analyzer is a web application that allows you to visualize and analyze your ChatGPT usage history. By uploading your ChatGPT data export, you can gain insights into your conversation patterns, model usage, and more.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Privacy-First**: All data processing is done locally in your browser. No conversation content is stored or transmitted.
+- **Interactive Visualizations**: View your ChatGPT usage through various charts and graphs.
+- **Anonymous Data Sharing**: Option to contribute anonymized statistics for research purposes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Use
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Export your ChatGPT data from the [OpenAI website](https://help.openai.com/en/articles/7260999-how-do-i-export-my-chatgpt-history-and-data).
+2. Visit [ChatGPT Data Analyzer](https://gptwrapped.husaria.dev/).
+3. Upload your `conversations.json` file.
+4. Explore your personalized insights and visualizations.
 
-## Learn More
+## Anonymized Data
 
-To learn more about Next.js, take a look at the following resources:
+If you're interested in viewing the anonymized, aggregated data contributed by users (with their consent), you can access it here:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[View Anonymized Research Data](https://docs.google.com/spreadsheets/d/1iQIxFqKJepTDkAh0xLQvbIwTgH6811MhOAH-8eeb9Ek/edit?usp=sharing)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This data contains only summarized statistics and does not include any personal information or message content.
 
-## Deploy on Vercel
+## Privacy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We take your privacy seriously. All analysis is performed locally in your browser, and no conversation content is ever stored or transmitted. Users can optionally choose to share anonymized, aggregated statistics for research purposes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Source Code
+
+This project is open-source. You can view the source code and contribute on GitHub:
+
+[GitHub Repository](https://github.com/assertjohn/chatgpt-wrapped)

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import { Header } from '@/components/Header'
 import { UploadSection } from '@/components/UploadSection'
 import { Report } from '@/components/Report'
