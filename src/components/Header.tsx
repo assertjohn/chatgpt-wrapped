@@ -27,28 +27,35 @@ export function Header() {
           ChatGPT Wrapped
         </h1>
         <div className="space-y-4 mb-8">
-          <p className="text-xl text-gray-300 flex items-center">
-            <BarChart2 className="w-5 h-5 mr-2 text-yellow-400" />
-            Visualize your ChatGPT usage history.
-          </p>
-          <p className="text-xl text-gray-300 flex items-center">
-            <Lock className="w-5 h-5 mr-2 text-green-400" />
-            All analysis is done locally, ensuring your privacy.
-          </p>
-          <p className="text-xl text-gray-300 flex items-center">
-            <Share2 className="w-5 h-5 mr-2 text-blue-400" />
-            Optionally share or{" "}
-            <a
-              href="https://gptwrapped-data.husaria.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 hover:underline mx-1"
-            >
-              view
-            </a>{" "}
-            anonymous stats for research.
-          </p>
+          <div className="flex items-start">
+            <BarChart2 className="w-5 h-5 mr-2 text-yellow-400 flex-shrink-0 mt-1" />
+            <p className="text-xl text-gray-300">
+              Visualize your ChatGPT usage history.
+            </p>
+          </div>
+          <div className="flex items-start">
+            <Lock className="w-5 h-5 mr-2 text-green-400 flex-shrink-0 mt-1" />
+            <p className="text-xl text-gray-300">
+              All analysis is done locally, ensuring your privacy.
+            </p>
+          </div>
+          <div className="flex items-start">
+            <Share2 className="w-5 h-5 mr-2 text-blue-400 flex-shrink-0 mt-1" />
+            <p className="text-xl text-gray-300">
+              Optionally share or{" "}
+              <a
+                href="https://gptwrapped-data.husaria.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:underline"
+              >
+                view
+              </a>{" "}
+              anonymous stats for research.
+            </p>
+          </div>
         </div>
+        
         <div className="bg-white/10 rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Get Started:</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -68,9 +75,9 @@ export function Header() {
                 <li>View your personal insights</li>
               </ol>
             </div>
-            <div className="flex items-top justify-center">
-              <p className="text-sm text-gray-400 text-left">
-                This project is an independant project not affiliated with OpenAI or ChatGPT.
+            <div className="flex items-center justify-center">
+              <p className="text-sm text-gray-400 text-center">
+                This project is not affiliated with, endorsed by, or sponsored by OpenAI or ChatGPT.
               </p>
             </div>
           </div>
