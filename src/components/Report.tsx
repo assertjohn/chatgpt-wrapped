@@ -13,7 +13,9 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#A28DFF", "#FF6B6B"
 
 export function Report({ stats, onClear }: ReportProps) {
   return (
-    <div className="space-y-12">
+    <div className="space-y-6">
+      <h1 className="text-4xl py-4 font-semibold">Your usage summary</h1>
+
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <StatCard
           icon={<MessageSquare size={24} />}
@@ -34,21 +36,22 @@ export function Report({ stats, onClear }: ReportProps) {
         />
         <StatCard icon={<Clock size={24} />} title="Longest Chat" value={`${stats.longestChat} messages`} />
       </section>
-
-      <section className="bg-white/5 rounded-lg p-8 pb-0 border border-white/10">
+      
+      <section className="bg-white/5 rounded-lg p-6 border border-white/10 shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Weekly Message Count</h2>
         <ResponsiveContainer width="100%" height={400}>
-          <BarChart data={prepareChartData(stats)} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
+          <BarChart data={prepareChartData(stats)} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
             <XAxis
               dataKey="week"
               angle={-45}
               textAnchor="end"
-              height={80}
+              height={60}
               interval={3}
               tickFormatter={(value) => value.split(",")[0]}
               stroke="#9CA3AF"
+              tick={{ fill: "#9CA3AF" }}
             />
-            <YAxis stroke="#9CA3AF" />
+            <YAxis stroke="#9CA3AF" tick={{ fill: "#9CA3AF" }} />
             <Tooltip contentStyle={{ backgroundColor: "rgba(0, 0, 0, 0.8)", border: "none", borderRadius: "4px" }} />
             <Legend />
             {Object.keys(stats.modelCounts).map((model, index) => (
@@ -58,7 +61,7 @@ export function Report({ stats, onClear }: ReportProps) {
         </ResponsiveContainer>
       </section>
 
-      <section className="bg-white/5 rounded-lg p-8 pb-0 border border-white/10">
+      <section className="bg-white/5 rounded-lg p-6 border border-white/10 shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Messages by Model</h2>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
@@ -104,15 +107,23 @@ export function Report({ stats, onClear }: ReportProps) {
         </div>
       </section>
 
-      <section className="bg-white/5 rounded-lg p-8 pb-0 border border-white/10">
+      <section className="bg-white/5 rounded-lg p-6 border border-white/10 shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Chat Length Distribution</h2>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart
             data={prepareChatLengthHistogram(stats.chatLengths)}
-            margin={{ top: 20, right: 30, left: 20, bottom: 40 }}
+            margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
           >
-            <XAxis dataKey="range" angle={-45} textAnchor="end" height={60} interval={0} stroke="#9CA3AF" />
-            <YAxis stroke="#9CA3AF" />
+            <XAxis
+              dataKey="range"
+              angle={-45}
+              textAnchor="end"
+              height={60}
+              interval={0}
+              stroke="#9CA3AF"
+              tick={{ fill: "#9CA3AF" }}
+            />
+            <YAxis stroke="#9CA3AF" tick={{ fill: "#9CA3AF" }} />
             <Tooltip contentStyle={{ backgroundColor: "rgba(0, 0, 0, 0.8)", border: "none", borderRadius: "4px" }} />
             <Bar dataKey="count" fill={COLORS[0]} />
           </BarChart>
@@ -123,7 +134,7 @@ export function Report({ stats, onClear }: ReportProps) {
         <Button
           onClick={onClear}
           variant="outline"
-          className="bg-white/10 hover:bg-white/20 text-white border-white/20 hover:text-white w-full"
+          className="bg-white/10 hover:bg-white/20 hover:text-white w-full py-6 text-white border-white/20"
         >
           Clear and Analyze Another File
         </Button>

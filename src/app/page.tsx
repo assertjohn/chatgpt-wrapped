@@ -1,25 +1,36 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { UploadSection } from '@/components/UploadSection'
 import { Report } from '@/components/Report'
 import { analyzeData } from './utils'
 import { Stats } from './utils'
+import { shareAnonymizedData } from '@/lib/data-sharing'
 
 export default function Home() {
   const [stats, setStats] = useState<Stats | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const reportRef = useRef<HTMLDivElement>(null)
 
-  const handleFileUpload = (file: File) => {
+  const handleFileUpload = async (file: File, shareData: boolean) => {
     const reader = new FileReader()
 
-    reader.onload = (event) => {
+    reader.onload = async (event) => {
       try {
         const json = JSON.parse(event.target?.result as string)
         const analyzedStats = analyzeData(json)
         setStats(analyzedStats)
         setError(null)
+
+        if (shareData) {
+          await shareAnonymizedData(analyzedStats)
+        }
+
+        // Scroll to the report after a short delay to ensure rendering is complete
+        setTimeout(() => {
+          reportRef.current?.scrollIntoView({ behavior: 'smooth' })
+        }, 100)
       } catch (error) {
         console.error('Error parsing JSON:', error)
         setStats(null)
@@ -33,10 +44,11 @@ export default function Home() {
   const handleClear = () => {
     setStats(null)
     setError(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <main className="container mx-auto px-4 py-12 max-w-5xl">
         {!stats && !error && <UploadSection onFileUpload={handleFileUpload} />}
@@ -45,7 +57,11 @@ export default function Home() {
             {error}
           </div>
         )}
-        {stats && <Report stats={stats} onClear={handleClear} />}
+        {stats && (
+          <div ref={reportRef}>
+            <Report stats={stats} onClear={handleClear} />
+          </div>
+        )}
       </main>
     </div>
   )
