@@ -24,7 +24,7 @@ export function Header() {
           </Button>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          ChatGPT Data Analyzer
+          ChatGPT Wrapped
         </h1>
         <div className="space-y-4 mb-8">
           <p className="text-xl text-gray-300 flex items-center">
