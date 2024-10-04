@@ -7,6 +7,8 @@ import { Report } from '@/components/Report'
 import { analyzeData } from './utils'
 import { Stats } from './utils'
 import { shareAnonymizedData } from '@/lib/data-sharing'
+import "@/lib/supress-warnings"
+
 
 export default function Home() {
   const [stats, setStats] = useState<Stats | null>(null)

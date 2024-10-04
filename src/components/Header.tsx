@@ -39,7 +39,7 @@ export function Header() {
             <Share2 className="w-5 h-5 mr-2 text-blue-400" />
             Optionally share or{" "}
             <a
-              href="https://docs.google.com/spreadsheets/d/1iQIxFqKJepTDkAh0xLQvbIwTgH6811MhOAH-8eeb9Ek/edit?usp=sharing"
+              href="https://gptwrapped-data.husaria.dev/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline mx-1"
