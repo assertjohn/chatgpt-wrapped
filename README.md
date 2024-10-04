@@ -21,7 +21,7 @@ ChatGPT Data Analyzer is a web application that allows you to visualize and anal
 
 If you're interested in viewing the anonymized, aggregated data contributed by users (with their consent), you can access it here:
 
-[View Anonymized Research Data](https://docs.google.com/spreadsheets/d/1iQIxFqKJepTDkAh0xLQvbIwTgH6811MhOAH-8eeb9Ek/edit?usp=sharing)
+[View Anonymized Research Data](https://gptwrapped-data.husaria.dev/)
 
 This data contains only summarized statistics and does not include any personal information or message content.
 
