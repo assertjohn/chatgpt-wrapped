@@ -46,25 +46,34 @@ export function Header() {
             >
               view
             </a>{" "}
-            anonymized stats for research.
+            anonymous stats for research.
           </p>
         </div>
         <div className="bg-white/10 rounded-lg p-6 mb-8">
           <h2 className="text-2xl font-semibold mb-4">Get Started:</h2>
-          <ol className="list-decimal list-inside space-y-2 text-gray-200">
-            <li>
-              <a
-                href="https://help.openai.com/en/articles/7260999-how-do-i-export-my-chatgpt-history-and-data"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:underline"
-              >
-                Export your ChatGPT data
-              </a> from OpenAI
-            </li>
-            <li>Upload the conversations.json file below</li>
-            <li>View your personal insights</li>
-          </ol>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <ol className="list-decimal list-inside space-y-2 text-gray-200">
+                <li>
+                  <a
+                    href="https://help.openai.com/en/articles/7260999-how-do-i-export-my-chatgpt-history-and-data"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    Export your ChatGPT data
+                  </a> from OpenAI
+                </li>
+                <li>Upload the conversations.json file below</li>
+                <li>View your personal insights</li>
+              </ol>
+            </div>
+            <div className="flex items-top justify-center">
+              <p className="text-sm text-gray-400 text-left">
+                This project is an independant project not affiliated with OpenAI or ChatGPT.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </header>

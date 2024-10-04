@@ -1,5 +1,9 @@
 # ChatGPT Data Analyzer
 
+## DISCLAIMER
+
+This project is in no way associate with OpenAI or ChatGPT. This is an independant project I made for fun.
+
 ## What is it?
 
 ChatGPT Data Analyzer is a web application that allows you to visualize and analyze your ChatGPT usage history. By uploading your ChatGPT data export, you can gain insights into your conversation patterns, model usage, and more.

@@ -59,7 +59,7 @@ export function UploadSection({ onFileUpload }: UploadSectionProps) {
             className="ml-2 text-blue-400 hover:text-blue-300 inline-flex items-center"
           >
             <ExternalLink size={14} className="mr-1" />
-            View example
+            View example of shared data
           </a>
         </Label>
       </div>
