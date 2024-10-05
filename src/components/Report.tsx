@@ -9,7 +9,7 @@ interface ReportProps {
   onClear: () => void;
 }
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#A28DFF", "#FF6B6B", "#4ECDC4", "#45B7D1"];
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#FF6B6B", "#4ECDC4", "#A28DFF", "#45B7D1"];
 
 export function Report({ stats, onClear }: ReportProps) {
   return (
@@ -36,7 +36,7 @@ export function Report({ stats, onClear }: ReportProps) {
         />
         <StatCard icon={<Clock size={24} />} title="Longest Chat" value={`${stats.longestChat} messages`} />
       </section>
-      
+
       <section className="bg-white/5 rounded-lg p-6 border border-white/10 shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Weekly Message Count</h2>
         <ResponsiveContainer width="100%" height={400}>
