@@ -75,8 +75,8 @@ export function Header() {
                 <li>View your personal insights</li>
               </ol>
             </div>
-            <div className="flex items-center justify-center">
-              <p className="text-sm text-gray-400 text-center">
+            <div className="flex items-top justify-center">
+              <p className="text-sm text-gray-400 text-left">
                 This project is not affiliated with, endorsed by, or sponsored by OpenAI or ChatGPT.
               </p>
             </div>
