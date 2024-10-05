@@ -2,7 +2,7 @@
 
 ## DISCLAIMER
 
-This project is in no way associate with OpenAI or ChatGPT. This is an independant project I made for fun.
+This project is not affiliated with, endorsed by, or sponsored by OpenAI or ChatGPT.
 
 ## What is it?
 
