@@ -36,7 +36,7 @@ export function Header() {
           <div className="flex items-start">
             <Lock className="w-5 h-5 mr-2 text-green-400 flex-shrink-0 mt-1" />
             <p className="text-xl text-gray-300">
-              All analysis is done locally, ensuring your privacy.
+              All analysis is done on your device, ensuring your privacy.
             </p>
           </div>
           <div className="flex items-start">
